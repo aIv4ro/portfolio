@@ -1,0 +1,26 @@
+---
+import { ProjectI, Tecnology } from '../types/project';
+import Project from './Project.astro';
+
+export interface Props {}
+
+const projects: ProjectI[] = [
+	{name: 'Chess', github: 'https://github.com/aIv4ro/chess', web: 'https://chessdev.vercel.app/', image: '/chess.png', description: 'In progress...', tecnologies: [Tecnology.Angular,]}, 
+	{name: 'Conways-Game', github: 'https://github.com/aIv4ro/Conways-Game', web: 'https://conways-game-alvaro.vercel.app/', image: '/cw-game.png', description: 'Based', tecnologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS]}, 
+	{name: 'Snake', github: 'https://github.com/aIv4ro/snake', web: 'https://snake-alvaro.vercel.app/', image: '/snake.png', tecnologies: [Tecnology.Angular]}, 
+	{name: 'TPV', github: 'https://github.com/ModuloInterLunar', image: '/chess.png', tecnologies: [Tecnology.CSharp, Tecnology.Kotlin, Tecnology.NodeJS, Tecnology.MongoDB]}
+];
+
+const {} = Astro.props;
+---
+
+<section id="projects" class="flex flex-col gap-5 p-5">
+	<h3>Projects</h3>
+	<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 list-none">
+		{
+			projects.map(project => <li><Project project={project}></Project></li>)
+		}
+	</ul>
+</section>
+<style>
+</style>
