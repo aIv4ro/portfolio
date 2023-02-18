@@ -1,32 +1,49 @@
 ---
-import { ProjectI, Tecnology } from '../types/project';
-import Github from './icons/github.astro';
+import { ProjectI, Tecnology } from "../types/project";
+import Github from "./icons/Github.astro";
 
 export interface Props {
-	project: ProjectI
+  project: ProjectI;
 }
 
 const github = Tecnology.Github;
 
-const {project} = Astro.props;
+const { project } = Astro.props;
 ---
 
-<article class="group flex overflow-hidden h-72 relative shadow-lg shadow-[#5c5369] rounded-sm">
-	<a target="_blank" href={project.web} class="hover:text-inherit w-full">
-		<img class="group-hover:scale-105 h-72 w-full object-cover transition-transform ease-in" src={project.image}>
-	</a>
-	<footer class="absolute bottom-0 left-0 right-0 p-2 flex justify-between  items-center bg-[#F6F6F6] opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-black/50">
-		<div>
-			<h4>{project.name}</h4>
-			<ul class="flex gap-1 list-none">
-				{project.tecnologies.map(tecnoloy => <li><img src={tecnoloy} class="w-5"/></li>)}
-			</ul>
-		</div>
-		<nav>
-			<a href={project.github} target="_blank">
-				<Github color="black" width="40px" height="40px"></Github>
-			</a>
-		</nav>
-	</footer>
+<article
+  class="group flex overflow-hidden h-72 relative shadow-lg shadow-[#5c5369] rounded-sm"
+>
+  <a
+    target="_blank"
+    href={project.web ?? project.github}
+    class="hover:text-inherit w-full"
+  >
+    <img
+      class="group-hover:scale-105 h-72 w-full object-cover transition-transform ease-in"
+      src={project.image}
+    />
+  </a>
+  <footer
+    class="absolute bottom-0 left-0 right-0 p-2 flex justify-between items-center bg-[#F6F6F6] opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-black/50"
+  >
+    <div>
+      <h4>{project.name}</h4>
+      <ul class="flex gap-1 list-none">
+        {
+          project.tecnologies.map((tecnoloy) => (
+            <li>
+              <img src={tecnoloy} class="w-5" />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <nav>
+      <a href={project.github} target="_blank">
+        <Github width="40px" height="40px" />
+      </a>
+    </nav>
+  </footer>
 </article>
 <style></style>
