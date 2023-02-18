@@ -1,11 +1,28 @@
 ---
+import ArrowDown from './icons/ArrowDown.astro';
+import Github from './icons/github.astro';
+
 export interface Props {}
 
 const {} = Astro.props;
 ---
 
-<section id="home">
+<section class="flex flex-col">
 	<h3>Home</h3>
+	<article class="flex gap-3 items-center justify-center h-full">
+		<aside>
+			<p>Hi!</p>
+			<p>I'm Álvaro Martínez,</p>
+			<p>Fullstack Developer</p>
+		</aside>
+		<img src="/cw-game.png" width="150px" height="150px" class="rounded-full border-2 border-gray-500"/>
+	</article>
+	<a href="#projects" class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#D7CDE7] bg-white">
+		<ArrowDown></ArrowDown>
+	</a>
 </section>
 <style>
+	section {
+		height: calc(100vh - var(--app-bar-height) - 15px);
+	}
 </style>
