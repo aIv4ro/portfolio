@@ -1,6 +1,7 @@
 ---
-import ArrowDown from './icons/ArrowDown.astro';
-import Github from './icons/github.astro';
+import ArrowDown from "./icons/ArrowDown.astro";
+import Github from "./icons/Github.astro";
+import Mail from "./icons/Mail.astro";
 
 export interface Props {}
 
@@ -8,21 +9,40 @@ const {} = Astro.props;
 ---
 
 <section class="flex flex-col">
-	<h3>Home</h3>
-	<article class="flex gap-3 items-center justify-center h-full">
-		<aside>
-			<p>Hi!</p>
-			<p>I'm Álvaro Martínez,</p>
-			<p>Fullstack Developer</p>
-		</aside>
-		<img src="/cw-game.png" width="150px" height="150px" class="rounded-full border-2 border-gray-500"/>
-	</article>
-	<a href="#projects" class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#D7CDE7] bg-white">
-		<ArrowDown></ArrowDown>
-	</a>
+  <h3 class="text-2xl">Home</h3>
+  <article
+    class="flex gap-3 items-center justify-center h-full flex-col sm:flex-row"
+  >
+    <div class="text-2xl">
+      <p>Hi!</p>
+      <p>I'm Álvaro Martínez,</p>
+      <p>Fullstack Developer</p>
+    </div>
+    <picture class="flex flex-col gap-1">
+      <img
+        src="/cw-game.png"
+        width="150px"
+        height="150px"
+        class="rounded-full border-2 border-gray-500"
+      />
+      <nav class="flex justify-center items-center gap-2">
+        <a target="_blank" href="https://github.com/aIv4ro"
+          ><Github width="25px" height="25px" /></a
+        >
+        <a><Mail width="25px" height="25px" /></a>
+        <a><Github width="25px" height="25px" /></a>
+      </nav>
+    </picture>
+  </article>
+  <a
+    href="#projects"
+    class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#D7CDE7] bg-white"
+  >
+    <ArrowDown />
+  </a>
 </section>
 <style>
-	section {
-		height: calc(100vh - var(--app-bar-height) - 15px);
-	}
+  section {
+    height: calc(100vh - var(--app-bar-height) - 15px);
+  }
 </style>
