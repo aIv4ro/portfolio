@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,46 +8,52 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="relative max-w-[900px] m-auto">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="relative max-w-[900px] m-auto">
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--app-bar-height: 60px;	
-		--text-color: black;
-		--hover-text-color: #0d5dc1;
-		--background-color: #F6F6F6;
-	}
-	* {
-		box-sizing: border-box;
-	}
-	html {
-		font-family: Nunito, system-ui, sans-serif;
-		font-weight: bold;
-		color: var(--text-color);
-		background-color: var(--background-color);
-		scroll-behavior: smooth;
-	}
-	body {
-		margin: 0;
-		padding: 0;
-	}
-	a {
-		color: var(--text-color);
-		text-decoration: none;
-		transition: all .2s;
-	}
-	a:hover {
-		color: var(--hover-text-color);
-	}
-	h3 {margin: 0;}
+  :root {
+    --app-bar-height: 60px;
+    --text-color: black;
+    --hover-text-color: #0d5dc1;
+    --background-color: #f6f6f6;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: Nunito, system-ui, sans-serif;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  a:hover {
+    color: var(--hover-text-color);
+  }
+  h3 {
+    margin: 0;
+  }
 </style>
