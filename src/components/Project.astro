@@ -1,12 +1,10 @@
 ---
-import { ProjectI, Tecnology } from "../types/project";
+import type { ProjectI } from "../types/project";
 import Github from "./icons/Github.astro";
 
 export interface Props {
   project: ProjectI;
 }
-
-const github = Tecnology.Github;
 
 const { project } = Astro.props;
 ---
