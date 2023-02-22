@@ -7,12 +7,12 @@ import About from "../components/About.astro";
 ---
 
 <Layout title="Portfolio de Álvaro Martínez">
-  <AppBar />
-  <main class="p-3 mt-[var(--app-bar-height)]">
-    <Home />
-    <Projects />
-    <About />
-  </main>
+	<AppBar />
+	<main class="p-3 mt-[var(--app-bar-height)] flex flex-col gap-10">
+		<Home />
+		<Projects />
+		<About />
+	</main>
 </Layout>
 
 <style></style>
