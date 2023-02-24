@@ -1,0 +1,26 @@
+---
+import Github from "./icons/Github.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import MailButton from "./MailButton.astro";
+
+export interface Props {}
+
+const {} = Astro.props;
+---
+
+<footer
+	class="flex flex-row justify-center align-center py-3 border-t-[1px] border-black"
+>
+	<a target="_blank" href="https://github.com/aIv4ro">
+		<Github width="26px" height="26px" />
+	</a>
+	<MailButton />
+	<a
+		target="_blank"
+		href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
+	>
+		<LinkedIn width="30px" height="30px" />
+	</a>
+</footer>
+
+<style></style>
