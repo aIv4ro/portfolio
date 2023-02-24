@@ -1,0 +1,42 @@
+---
+export interface Props {}
+const timeLine = [
+	{
+		title: "2022 - 2023 Sime Telecom",
+		content:
+			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?",
+	},
+	{
+		title: "2020 - 2022 FP DAM",
+		content:
+			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?",
+	},
+];
+
+const {} = Astro.props;
+---
+
+<section id="about">
+	<h3 class="text-2xl mb-3">About</h3>
+	<ul class="flex flex-col">
+		{
+			timeLine.map((work) => {
+				return (
+					<li>
+						<header class="flex items-center gap-2">
+							<span class="w-4 h-4 border-blue-800 border-2 rounded-full inline-block" />
+							<h4 class="text-xl">{work.title}</h4>
+						</header>
+						<article class="flex gap-2">
+							<span class="min-w-[1rem] min-h-[10px] flex justify-center">
+								<span class="w-1 h-full bg-blue-400 rounded-sm" />
+							</span>
+							<p>{work.content}</p>
+						</article>
+					</li>
+				);
+			})
+		}
+	</ul>
+</section>
+<style></style>
