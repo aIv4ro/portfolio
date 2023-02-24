@@ -1,7 +1,7 @@
 ---
 import Github from "./icons/Github.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-import MailButton from "./MailButton.astro";
+import { MailButton } from "./MailButton.jsx";
 
 export interface Props {}
 
@@ -14,7 +14,7 @@ const {} = Astro.props;
 	<a target="_blank" href="https://github.com/aIv4ro">
 		<Github width="26px" height="26px" />
 	</a>
-	<MailButton />
+	<MailButton client:load />
 	<a
 		target="_blank"
 		href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
