@@ -6,7 +6,7 @@ export function MailButton({ }) {
 		window.open("mailto:alvaromagu2002@gmail.com");
 	}
 	return (
-		<button onClick={handleClick} class="transition-colors hover:text-[var(--hover-text-color)]">
+		<button onClick={handleClick} class="hover:text-[var(--hover-text-color)]">
 			<Mail className="w-8" />
 		</button>
 	);
