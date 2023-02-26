@@ -9,9 +9,7 @@ export interface Props {
 const { project } = Astro.props;
 ---
 
-<article
-	class="group flex overflow-hidden h-72 relative shadow-lg shadow-[#202020] dark:dark:shadow-[#03080e] rounded-sm"
->
+<article class="group flex overflow-hidden h-72 relative shadow-lg rounded-sm">
 	<a
 		target="_blank"
 		href={project.web ?? project.github}
@@ -23,7 +21,7 @@ const { project } = Astro.props;
 		/>
 	</a>
 	<footer
-		class="absolute bottom-0 left-0 right-0 p-2 flex justify-between items-center bg-[var(--background-color)] dark:bg-[var(--d-background-color)] opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-black/50"
+		class="absolute bottom-0 left-0 right-0 p-2 flex justify-between items-center bg-[var(--background-color)] dark:bg-[var(--d-on-background-color)] opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-black"
 	>
 		<div>
 			<h4>{project.name}</h4>
