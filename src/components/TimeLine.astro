@@ -2,12 +2,16 @@
 export interface Props {}
 const timeLine = [
 	{
-		title: "2022 - 2023 Sime Telecom",
+		from: "February 2022",
+		to: "June 2022",
+		title: "Sime",
 		content:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?",
 	},
 	{
-		title: "2020 - 2022 FP DAM",
+		from: "February 2022",
+		to: "June 2022",
+		title: "Sime",
 		content:
 			"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laudantium obcaecati rerum fugit optio. Eos placeat facere, iusto, velit a dolores neque rem aperiam totam doloribus obcaecati at ipsum nostrum?",
 	},
@@ -18,25 +22,25 @@ const {} = Astro.props;
 
 <section id="timeLine" class="min-h-screen">
 	<h3 class="text-2xl mb-3 mt-16">TimeLine</h3>
-	<ul class="flex flex-col">
+	<ol class="relative border-l border-blue-800 ml-2">
 		{
 			timeLine.map((work) => {
 				return (
-					<li>
-						<header class="flex items-center gap-2">
-							<span class="w-4 h-4 border-blue-800 border-2 rounded-full inline-block" />
-							<h4 class="text-xl">{work.title}</h4>
-						</header>
-						<article class="flex gap-2">
-							<span class="min-w-[1rem] min-h-[10px] flex justify-center">
-								<span class="w-1 h-full bg-blue-400 rounded-sm" />
-							</span>
-							<p>{work.content}</p>
-						</article>
+					<li class="mb-7 ml-4">
+						<div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-blue-400" />
+						<time class="mb-1 font-semibold leading-none text-[#626262] dark:text-[#d5c5c5]">
+							{work.from} - {work.to}
+						</time>
+						<h3 class="text-2xl font-semibold text-black dark:text-white">
+							{work.title}
+						</h3>
+						<p class="text-lg font-normal text-[#626262] dark:text-[#d5c5c5]">
+							{work.content}
+						</p>
 					</li>
 				);
 			})
 		}
-	</ul>
+	</ol>
 </section>
 <style></style>
