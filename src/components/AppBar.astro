@@ -7,20 +7,20 @@ const {} = Astro.props;
 ---
 
 <header
-	class="p-3 h-[var(--app-bar-height)] flex items-center overflow-hidden justify-between border-b-[1px] border-black border-solid top-0 w-full max-w-[900px] m-auto fixed z-10 backdrop-blur-md"
+	class="p-3 h-[var(--app-bar-height)] flex items-center overflow-hidden justify-between border-b-[1px] border-black border-solid top-0 w-full max-w-[900px] m-auto fixed z-10 backdrop-blur-sm gap-3 bg-[var(--op-background-color)] dark:bg-[var(--d-op-background-color)]"
 >
-	<code class="font-bold bg-[#7c3aed25] rounded py-1 px-2"
-		>&#60;/alvaro&#62;</code
-	>
-	<nav>
-		<ul class="flex list-none gap-3">
+	<code class="font-bold bg-[#7c3aed25] rounded py-1 px-2">
+		&#60;/alvaro&#62;
+	</code>
+	<nav class="flex-1 sm:border-white sm:border-2">
+		<ul class="flex gap-3 items-center justify-end">
 			<li><a href="#">Home</a></li>
 			<li><a href="#projects">Projects</a></li>
 			<li><a href="#timeLine">TimeLine</a></li>
 			<li><a target="_blank" href="/cv.pdf">CV</a></li>
-			<li><ThemeButton client:load /></li>
 		</ul>
 	</nav>
+	<ThemeButton client:load />
 </header>
 
 <style></style>
