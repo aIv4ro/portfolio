@@ -7,7 +7,7 @@ export function MailButton({ }) {
 	}
 	return (
 		<button onClick={handleClick} class="hover:text-[var(--hover-text-color)]">
-			<Mail className="w-8" />
+			<Mail width="30px" height="30px" />
 		</button>
 	);
 }

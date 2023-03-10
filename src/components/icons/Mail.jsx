@@ -1,15 +1,9 @@
-export function Mail({ className }) {
+export function Mail({ width, height }) {
 	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			className={className}
-			viewBox="0 96 960 960"
-			fill="currentColor"
-		>
-			<path
-				d="M140 896q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140 371v465h680V371L480 594Zm0-60 336-218H145l335 218ZM140 371v-55 520-465Z"
-			>
-			</path>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width={width} height={height} viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+			<path d="M3 7l9 6l9 -6"></path>
 		</svg>
 	);
 }
