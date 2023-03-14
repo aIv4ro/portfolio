@@ -13,7 +13,7 @@ const {} = Astro.props;
 	<code class="font-bold bg-[#7c3aed25] rounded py-1 px-2">
 		&#60;/alvaro&#62;
 	</code>
-	<input class="hidden" type="checkbox" id="ham" name="ham" checked />
+	<input class="hidden" type="checkbox" id="ham" name="ham" />
 	<nav
 		class="flex-1 max-sm:bg-[var(--background-color)] dark:max-sm:bg-[var(--d-background-color)] max-sm:absolute max-sm:top-[var(--app-bar-height)] max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:h-[calc(100vh-var(--app-bar-height))] max-sm:pt-5 max-sm:opacity-95"
 	>
@@ -38,32 +38,17 @@ const {} = Astro.props;
 <style>
 	@media (max-width: 639px) {
 		#ham + nav {
-			animation: out 0.3s forwards;
+			transform: translateX(-100%);
+			transition: transform 0.3s;
+			/*animation: out 0.3s forwards;*/
 		}
 
 		#ham:checked + nav {
 			display: flex;
 			justify-content: center;
 			align-items: flex-start;
-			animation: in 0.3s forwards;
-		}
-	}
-
-	@keyframes in {
-		from {
-			transform: translateX(-100%);
-		}
-		to {
+			/*animation: in 0.3s forwards;*/
 			transform: translateX(0);
-		}
-	}
-
-	@keyframes out {
-		from {
-			transform: translateX(0);
-		}
-		to {
-			transform: translateX(-100%);
 		}
 	}
 </style>
