@@ -9,7 +9,7 @@ export interface Props {}
 const {} = Astro.props;
 ---
 
-<section class="flex flex-col">
+<section class="flex flex-col h-[calc(100vh-var(--app-bar-height)-15px)]">
 	<article
 		class="flex gap-10 items-center justify-center h-full flex-col sm:flex-row"
 	>
@@ -45,8 +45,4 @@ const {} = Astro.props;
 		<ArrowDown />
 	</a>
 </section>
-<style>
-	section {
-		height: calc(100vh - var(--app-bar-height) - 15px);
-	}
-</style>
+<style></style>
