@@ -28,9 +28,9 @@ const { project } = Astro.props;
 			<h4>{project.name}</h4>
 			<ul class="flex gap-1 list-none">
 				{
-					project.tecnologies.map((tecnoloy) => (
+					project.technologies.map((technology) => (
 						<li>
-							<img alt={tecnoloy} src={tecnoloy} class="w-5" />
+							<img alt={technology} src={technology} class="w-5" />
 						</li>
 					))
 				}

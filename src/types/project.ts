@@ -8,5 +8,5 @@ export interface ProjectI {
 	github: string;
 	web?: string;
 	image: string;
-	tecnologies: Tecnology[];
+	technologies: Tecnology[];
 }

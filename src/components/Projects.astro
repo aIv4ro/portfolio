@@ -11,7 +11,7 @@ const projects: ProjectI[] = [
 		web: "https://chessdev.vercel.app/",
 		image: "/chess.png",
 		description: "In progress...",
-		tecnologies: [Tecnology.Angular],
+		technologies: [Tecnology.Angular],
 	},
 	{
 		name: "Conways-Game",
@@ -19,20 +19,20 @@ const projects: ProjectI[] = [
 		web: "https://conways-game-alvaro.vercel.app/",
 		image: "/cw-game.png",
 		description: "Based",
-		tecnologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS],
+		technologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS],
 	},
 	{
 		name: "Snake",
 		github: "https://github.com/aIv4ro/snake",
 		web: "https://snake-alvaro.vercel.app/",
 		image: "/snake.png",
-		tecnologies: [Tecnology.Angular],
+		technologies: [Tecnology.Angular],
 	},
 	{
 		name: "TPV",
 		github: "https://github.com/ModuloInterLunar",
 		image: "/chess.png",
-		tecnologies: [
+		technologies: [
 			Tecnology.CSharp,
 			Tecnology.Kotlin,
 			Tecnology.NodeJS,
@@ -45,7 +45,7 @@ const {} = Astro.props;
 ---
 
 <section id="projects" class="flex flex-col gap-5 min-h-screen">
-	<h3 class="text-2xl mt-16">Projectos</h3>
+	<h3 class="text-2xl mt-16">Proyectos</h3>
 	<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
 			projects.map((project) => (
