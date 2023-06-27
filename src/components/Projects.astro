@@ -6,14 +6,6 @@ export interface Props {}
 
 const projects: ProjectI[] = [
 	{
-		name: "Chess",
-		github: "https://github.com/aIv4ro/chess",
-		web: "https://chessdev.vercel.app/",
-		image: "/chess.png",
-		description: "In progress...",
-		technologies: [Tecnology.Angular],
-	},
-	{
 		name: "Conways-Game",
 		github: "https://github.com/aIv4ro/Conways-Game",
 		web: "https://conways-game-alvaro.vercel.app/",
@@ -29,9 +21,25 @@ const projects: ProjectI[] = [
 		technologies: [Tecnology.Angular],
 	},
 	{
+		name: 'Wallhaven',
+		github: "https://github.com/aIv4ro/wallhaven",
+		web: 'https://wallhavendev.vercel.app/',
+		image: '/wallhaven.png',
+		technologies: [Tecnology.Angular]
+	},
+	{
+		name: 'Image uploader',
+		github: 'https://github.com/aIv4ro/iup-front',
+		web: 'https://iup-front.vercel.app/',
+		image: '/iup.png',
+		technologies: [
+			Tecnology.React
+		]
+	},
+	{
 		name: "TPV",
 		github: "https://github.com/ModuloInterLunar",
-		image: "/chess.png",
+		image: "/tpv.png",
 		technologies: [
 			Tecnology.CSharp,
 			Tecnology.Kotlin,
@@ -39,7 +47,26 @@ const projects: ProjectI[] = [
 			Tecnology.MongoDB,
 		],
 	},
+	{
+		name: "Gestión de instalaciones de pádel",
+		github: "https://github.com/Alvaro-Final-Proyect",
+		image: "/paddle.png",
+		technologies: [
+			Tecnology.MongoDB,
+			Tecnology.NodeJS,
+			Tecnology.Flutter,
+		],
+	},
 ];
+
+const soonProject =	{
+	name: "Chess",
+	github: "https://github.com/aIv4ro/chess",
+	web: "https://chessdev.vercel.app/",
+	image: "/chess.png",
+	description: "In progress...",
+	technologies: [Tecnology.Angular],
+}
 
 const {} = Astro.props;
 ---
@@ -55,5 +82,12 @@ const {} = Astro.props;
 			))
 		}
 	</ul>
+	<h3 class="text-2xl">Projecto en progreso</h3>
+	<Project project={soonProject} />
+	<div class="flex justify-center">
+		<a target="_blank" href="https://github.com/aIv4ro?tab=repositories" class="p-3 bg-[var(--on-background-color)] dark:bg-[var(--d-on-background-color)] rounded-md">
+			Ver más projectos
+		</a>
+	</div>
 </section>
 <style></style>
