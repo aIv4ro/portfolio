@@ -25,12 +25,13 @@ const {} = Astro.props;
 				class="rounded-full border-2 border-gray-500 w-52"
 			/>
 			<nav class="flex justify-center items-center gap-2">
-				<a target="_blank" href="https://github.com/aIv4ro">
+				<a target="_blank" href="https://github.com/aIv4ro" aria-label="Ver Github">
 					<Github width="27px" height="27px" />
 				</a>
 				<MailButton client:load />
 				<a
 					target="_blank"
+					aria-label="Ver LinkedIn"
 					href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
 				>
 					<LinkedIn width="30px" height="30px" />
@@ -41,6 +42,7 @@ const {} = Astro.props;
 	<a
 		href="#projects"
 		class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#c099fd]"
+		aria-label="Ver Proyectos"
 	>
 		<ArrowDown />
 	</a>
