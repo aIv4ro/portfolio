@@ -6,19 +6,18 @@ export interface Props {}
 
 const projects: ProjectI[] = [
 	{
+		name: "Chess",
+		github: "https://github.com/aIv4ro/chess",
+		web: "https://chessdev.vercel.app/",
+		image: "/chess.png",
+		technologies: [Tecnology.React],
+	},	
+	{
 		name: "Conways-Game",
 		github: "https://github.com/aIv4ro/Conways-Game",
 		web: "https://conways-game-alvaro.vercel.app/",
 		image: "/cw-game.png",
-		description: "Based",
 		technologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS],
-	},
-	{
-		name: "Snake",
-		github: "https://github.com/aIv4ro/snake",
-		web: "https://snake-alvaro.vercel.app/",
-		image: "/snake.png",
-		technologies: [Tecnology.Angular],
 	},
 	{
 		name: 'Wallhaven',
@@ -28,10 +27,10 @@ const projects: ProjectI[] = [
 		technologies: [Tecnology.Angular]
 	},
 	{
-		name: 'Image uploader',
-		github: 'https://github.com/aIv4ro/iup-front',
-		web: 'https://iup-front.vercel.app/',
-		image: '/iup.png',
+		name: 'Background remover',
+		github: 'https://github.com/aIv4ro/bg-remover',
+		web: 'https://dev-bgremover.vercel.app/',
+		image: '/bg-remover.png',
 		technologies: [
 			Tecnology.React
 		]
@@ -58,16 +57,6 @@ const projects: ProjectI[] = [
 		],
 	},
 ];
-
-const soonProject =	{
-	name: "Chess",
-	github: "https://github.com/aIv4ro/chess",
-	web: "https://chessdev.vercel.app/",
-	image: "/chess.png",
-	description: "In progress...",
-	technologies: [Tecnology.Angular],
-}
-
 const {} = Astro.props;
 ---
 
@@ -82,8 +71,6 @@ const {} = Astro.props;
 			))
 		}
 	</ul>
-	<h3 class="text-2xl">Projecto en progreso</h3>
-	<Project project={soonProject} />
 	<div class="flex justify-center">
 		<a target="_blank" href="https://github.com/aIv4ro?tab=repositories" class="p-3 bg-[var(--on-background-color)] dark:bg-[var(--d-on-background-color)] rounded-md">
 			Ver más projectos
