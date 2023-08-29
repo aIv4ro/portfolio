@@ -1,6 +1,6 @@
 ---
 import Hamburguer from "./icons/Hamburguer.astro";
-import { ThemeButton } from "./ThemeButton.jsx";
+import ThemeButton from "./ThemeButton.astro";
 
 export interface Props {}
 
@@ -32,7 +32,7 @@ const {} = Astro.props;
 	>
 		<Hamburguer width="24px" height="24px" />
 	</label>
-	<ThemeButton client:load />
+	<ThemeButton />
 </header>
 
 <style>

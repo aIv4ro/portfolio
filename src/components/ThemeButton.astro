@@ -1,0 +1,15 @@
+---
+import Theme from "./icons/Theme.astro";
+
+---
+<button class="theme-button transition-colors hover:text-[var(--hover-text-color)]" aria-label="Cambiar tema">
+	<Theme width={20} height={20} />
+</button>
+<script>
+	const buttons = document.querySelectorAll('.theme-button');
+	const handleClick = (evt: any) => {
+		evt.preventDefault();
+		document.documentElement.classList.toggle('dark')
+	}
+	buttons.forEach(button => button.addEventListener('click', handleClick));
+</script>
