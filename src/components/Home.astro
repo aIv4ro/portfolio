@@ -2,7 +2,7 @@
 import ArrowDown from "./icons/ArrowDown.astro";
 import Github from "./icons/Github.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-import { MailButton } from "./MailButton.jsx";
+import MailButton from "./MailButton.astro";
 
 export interface Props {}
 
@@ -30,7 +30,7 @@ const {} = Astro.props;
 				<a target="_blank" href="https://github.com/aIv4ro" aria-label="Ver Github">
 					<Github width="27px" height="27px" />
 				</a>
-				<MailButton client:load />
+				<MailButton />
 				<a
 					target="_blank"
 					aria-label="Ver LinkedIn"
