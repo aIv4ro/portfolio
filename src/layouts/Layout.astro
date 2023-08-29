@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="es" class="dark transition-colors">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -30,26 +30,26 @@ const { title } = Astro.props;
 		--background-color: #f6f6f6;
 		--op-background-color: #f6f6f6e0;
 		--on-background-color: #e5e5e5;
+	}
+	.dark {
 		/* dark-theme vars */
-		--d-text-color: #e0dfdf;
-		--d-hover-text-color: #4497ff;
-		--d-background-color: #2c3333;
-		--d-op-background-color: #2c3333e0;
-		--d-on-background-color: #395b64;
+		--text-color: #e0dfdf;
+		--hover-text-color: #4497ff;
+		--background-color: #2c3333;
+		--op-background-color: #2c3333e0;
+		--on-background-color: #395b64;
 	}
 	* {
 		box-sizing: border-box;
 	}
+	body {
+		color: var(--text-color);
+		background-color: var(--background-color);
+	}
 	html {
 		font-family: Nunito, system-ui, sans-serif;
 		font-weight: bold;
-		color: var(--text-color);
-		background-color: var(--background-color);
 		scroll-behavior: smooth;
-	}
-	.dark {
-		color: var(--d-text-color);
-		background-color: var(--d-background-color);
 	}
 	body {
 		margin: 0;
@@ -58,18 +58,9 @@ const { title } = Astro.props;
 	a {
 		color: var(--text-color);
 		text-decoration: none;
-		transition: all 0.2s;
 	}
 	a:hover {
 		color: var(--hover-text-color);
-	}
-	.dark a {
-		color: var(--d-text-color);
-		text-decoration: none;
-		transition: all 0.2s;
-	}
-	.dark a:hover {
-		color: var(--d-hover-text-color);
 	}
 	h3 {
 		margin: 0;
