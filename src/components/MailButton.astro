@@ -1,18 +1,19 @@
 ---
-import Mail from "./icons/Mail.astro";
+import Mail from './icons/Mail.astro';
 ---
-<button 
-	class="hover:text-[var(--hover-text-color)] mail-button" 
-	aria-label="Enviar correo"
+
+<button
+  class="hover:text-[var(--hover-text-color)] mail-button"
+  aria-label="Enviar correo"
 >
-	<Mail width={30} height={30} />
+  <Mail width={30} height={30} />
 </button>
 
 <script>
-	const handleClick = (evt: any) => {
-		evt.preventDefault();
-		window.open("mailto:alvaromagu2002@gmail.com");
-	}
-	const buttons = document.querySelectorAll(".mail-button")!;
-	buttons.forEach(button => button.addEventListener("click", handleClick));
+  const handleClick = (evt: any) => {
+    evt.preventDefault();
+    window.open("mailto:alvaromagu2002@gmail.com");
+  };
+  const buttons = document.querySelectorAll(".mail-button")!;
+  buttons.forEach((button) => button.addEventListener("click", handleClick));
 </script>

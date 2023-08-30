@@ -1,80 +1,75 @@
 ---
-import { type ProjectI, Tecnology } from "../types/project";
-import Project from "./Project.astro";
-
-export interface Props {}
+import { type ProjectI, Tecnology } from '../types/project'
+import Project from './Project.astro'
 
 const projects: ProjectI[] = [
-	{
-		name: "Chess",
-		github: "https://github.com/aIv4ro/chess",
-		web: "https://chessdev.vercel.app/",
-		image: "/chess.webp",
-		technologies: [Tecnology.React],
-	},	
-	{
-		name: "Conways-Game",
-		github: "https://github.com/aIv4ro/Conways-Game",
-		web: "https://conways-game-alvaro.vercel.app/",
-		image: "/cw-game.webp",
-		technologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS],
-	},
-	{
-		name: 'Wallhaven',
-		github: "https://github.com/aIv4ro/wallhaven",
-		web: 'https://wallhavendev.vercel.app/',
-		image: '/wallhaven.webp',
-		technologies: [Tecnology.Angular]
-	},
-	{
-		name: 'Background remover',
-		github: 'https://github.com/aIv4ro/bg-remover',
-		web: 'https://dev-bgremover.vercel.app/',
-		image: '/bg-remover.webp',
-		technologies: [
-			Tecnology.React
-		]
-	},
-	{
-		name: "TPV",
-		github: "https://github.com/ModuloInterLunar",
-		image: "/tpv.webp",
-		technologies: [
-			Tecnology.CSharp,
-			Tecnology.Kotlin,
-			Tecnology.NodeJS,
-			Tecnology.MongoDB,
-		],
-	},
-	{
-		name: "Gestión de instalaciones de pádel",
-		github: "https://github.com/Alvaro-Final-Proyect",
-		image: "/paddle.webp",
-		technologies: [
-			Tecnology.MongoDB,
-			Tecnology.NodeJS,
-			Tecnology.Flutter,
-		],
-	},
+  {
+    name: 'Chess',
+    github: 'https://github.com/aIv4ro/chess',
+    web: 'https://chessdev.vercel.app/',
+    image: '/chess.webp',
+    technologies: [Tecnology.React]
+  },
+  {
+    name: 'Conways-Game',
+    github: 'https://github.com/aIv4ro/Conways-Game',
+    web: 'https://conways-game-alvaro.vercel.app/',
+    image: '/cw-game.webp',
+    technologies: [Tecnology.Javascript, Tecnology.HTML, Tecnology.CSS]
+  },
+  {
+    name: 'Wallhaven',
+    github: 'https://github.com/aIv4ro/wallhaven',
+    web: 'https://wallhavendev.vercel.app/',
+    image: '/wallhaven.webp',
+    technologies: [Tecnology.Angular]
+  },
+  {
+    name: 'Background remover',
+    github: 'https://github.com/aIv4ro/bg-remover',
+    web: 'https://dev-bgremover.vercel.app/',
+    image: '/bg-remover.webp',
+    technologies: [Tecnology.React]
+  },
+  {
+    name: 'TPV',
+    github: 'https://github.com/ModuloInterLunar',
+    image: '/tpv.webp',
+    technologies: [
+      Tecnology.CSharp,
+      Tecnology.Kotlin,
+      Tecnology.NodeJS,
+      Tecnology.MongoDB
+    ]
+  },
+  {
+    name: 'Gestión de instalaciones de pádel',
+    github: 'https://github.com/Alvaro-Final-Proyect',
+    image: '/paddle.webp',
+    technologies: [Tecnology.MongoDB, Tecnology.NodeJS, Tecnology.Flutter]
+  }
 ];
-const {} = Astro.props;
 ---
 
 <section id="projects" class="flex flex-col gap-5 min-h-screen">
-	<h3 class="text-2xl mt-16">Proyectos</h3>
-	<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-		{
-			projects.map((project) => (
-				<li>
-					<Project project={project} />
-				</li>
-			))
-		}
-	</ul>
-	<div class="flex justify-center">
-		<a target="_blank" href="https://github.com/aIv4ro?tab=repositories" class="p-3 bg-[var(--on-background-color)] rounded-md">
-			Ver más projectos
-		</a>
-	</div>
+  <h3 class="text-2xl mt-16">Proyectos</h3>
+  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    {
+      projects.map((project) => (
+        <li>
+          <Project project={project} />
+        </li>
+      ))
+    }
+  </ul>
+  <div class="flex justify-center">
+    <a
+      target="_blank"
+      href="https://github.com/aIv4ro?tab=repositories"
+      class="p-3 bg-[var(--on-background-color)] rounded-md"
+    >
+      Ver más projectos
+    </a>
+  </div>
 </section>
 <style></style>

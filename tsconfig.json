@@ -1,4 +1,5 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {}
+  "compilerOptions": {},
+  "include": ["src", "./.eslintrc.cjs", "./tailwind.config.cjs", "astro.config.mjs"]
 }

@@ -1,52 +1,52 @@
 ---
-import ArrowDown from "./icons/ArrowDown.astro";
-import Github from "./icons/Github.astro";
-import LinkedIn from "./icons/LinkedIn.astro";
-import MailButton from "./MailButton.astro";
-
-export interface Props {}
-
-const {} = Astro.props;
+import ArrowDown from './icons/ArrowDown.astro'
+import Github from './icons/Github.astro'
+import LinkedIn from './icons/LinkedIn.astro'
+import MailButton from './MailButton.astro'
 ---
 
 <section class="flex flex-col h-[calc(100vh-var(--app-bar-height)-15px)]">
-	<article
-		class="flex gap-10 items-center justify-center h-full flex-col sm:flex-row"
-	>
-		<div class="max-w-[40ch]">
-			<p class="text-3xl">¡Hola!</p>
-			<p class="text-4xl">Soy Álvaro Martínez</p>
-			<p class="text-3xl">Fullstack Developer</p>
-		</div>
-		<picture class="flex flex-col gap-3">
-			<img
-				src="/cw-game.webp"
-				alt="alvaro martinez"
-				class="rounded-full border-2 border-gray-500"
-				width="210"
-				height="210"
-			/>
-			<nav class="flex justify-center items-center gap-2">
-				<a target="_blank" href="https://github.com/aIv4ro" aria-label="Ver Github">
-					<Github width="27px" height="27px" />
-				</a>
-				<MailButton />
-				<a
-					target="_blank"
-					aria-label="Ver LinkedIn"
-					href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
-				>
-					<LinkedIn width="30px" height="30px" />
-				</a>
-			</nav>
-		</picture>
-	</article>
-	<a
-		href="#projects"
-		class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#c099fd]"
-		aria-label="Ver Proyectos"
-	>
-		<ArrowDown />
-	</a>
+  <article
+    class="flex gap-10 items-center justify-center h-full flex-col sm:flex-row"
+  >
+    <div class="max-w-[40ch]">
+      <p class="text-3xl">¡Hola!</p>
+      <p class="text-4xl">Soy Álvaro Martínez</p>
+      <p class="text-3xl">Fullstack Developer</p>
+    </div>
+    <picture class="flex flex-col gap-3">
+      <img
+        src="/cw-game.webp"
+        alt="alvaro martinez"
+        class="rounded-full border-2 border-gray-500"
+        width="210"
+        height="210"
+      />
+      <nav class="flex justify-center items-center gap-2">
+        <a
+          target="_blank"
+          href="https://github.com/aIv4ro"
+          aria-label="Ver Github"
+        >
+          <Github width="27px" height="27px" />
+        </a>
+        <MailButton />
+        <a
+          target="_blank"
+          aria-label="Ver LinkedIn"
+          href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
+        >
+          <LinkedIn width="30px" height="30px" />
+        </a>
+      </nav>
+    </picture>
+  </article>
+  <a
+    href="#projects"
+    class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#c099fd]"
+    aria-label="Ver Proyectos"
+  >
+    <ArrowDown />
+  </a>
 </section>
 <style></style>

@@ -1,53 +1,50 @@
 ---
-export interface Props {}
 const timeLine = [
-	{
-		from: "Octubre 2022",
-		to: "Actualidad",
-		title: "Sime",
-		content:
-			"Actualmente mi puesto de trabajo consiste en el desarrollo fullstack de un PMS para gestionar reservas de Hoteles y Eventos. La parte frontend de esta aplicación está desarrollada en Angular y la parte backend con Spring.",
-	},
-	{
-		from: "Marzo 2022",
-		to: "Julio 2022",
-		title: "Sime (Prácticas FP)",
-		content:
-			"Mi trabajo consistía en el mantenimiento de una TPV para dispositivos Android desarrollada en Java con Android Views y el comienzo de un desarrollo nuevo con Flutter.",
-	},
-	{
-		from: "Septiembre 2020",
-		to: "Junio 2022",
-		title: "Grado Superior de Desarrollo de Aplicaciones Multiplataforma",
-		content:
-			"Durante el primer año aprendí las bases de la programación con Java y Javascript. En el segundo año obtuve los conocimientos necesarios para desarrollar aplicaciones backend con NodeJS y aplicaciones frontend con Jetpack Compose y Flutter.",
-	},
+  {
+    from: 'Octubre 2022',
+    to: 'Actualidad',
+    title: 'Sime',
+    content:
+      'Actualmente mi puesto de trabajo consiste en el desarrollo fullstack de un PMS para gestionar reservas de Hoteles y Eventos. La parte frontend de esta aplicación está desarrollada en Angular y la parte backend con Spring.'
+  },
+  {
+    from: 'Marzo 2022',
+    to: 'Julio 2022',
+    title: 'Sime (Prácticas FP)',
+    content:
+      'Mi trabajo consistía en el mantenimiento de una TPV para dispositivos Android desarrollada en Java con Android Views y el comienzo de un desarrollo nuevo con Flutter.'
+  },
+  {
+    from: 'Septiembre 2020',
+    to: 'Junio 2022',
+    title: 'Grado Superior de Desarrollo de Aplicaciones Multiplataforma',
+    content:
+      'Durante el primer año aprendí las bases de la programación con Java y Javascript. En el segundo año obtuve los conocimientos necesarios para desarrollar aplicaciones backend con NodeJS y aplicaciones frontend con Jetpack Compose y Flutter.'
+  }
 ];
-
-const {} = Astro.props;
 ---
 
 <section id="timeLine" class="min-h-screen">
-	<h3 class="text-2xl mb-3 mt-16">Experiencia</h3>
-	<ol class="relative border-l border-blue-800 ml-2">
-		{
-			timeLine.map((work) => {
-				return (
-					<li class="mb-7 ml-4">
-						<div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-blue-400" />
-						<time class="mb-1 font-semibold leading-none text-[#626262] dark:text-[#d5c5c5]">
-							{work.from} - {work.to}
-						</time>
-						<h3 class="text-xl font-semibold text-black dark:text-white">
-							{work.title}
-						</h3>
-						<p class="text-lg font-normal text-[#626262] dark:text-[#d5c5c5]">
-							{work.content}
-						</p>
-					</li>
-				);
-			})
-		}
-	</ol>
+  <h3 class="text-2xl mb-3 mt-16">Experiencia</h3>
+  <ol class="relative border-l border-blue-800 ml-2">
+    {
+      timeLine.map((work) => {
+        return (
+          <li class="mb-7 ml-4">
+            <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-blue-400" />
+            <time class="mb-1 font-semibold leading-none text-[#626262] dark:text-[#d5c5c5]">
+              {work.from} - {work.to}
+            </time>
+            <h3 class="text-xl font-semibold text-black dark:text-white">
+              {work.title}
+            </h3>
+            <p class="text-lg font-normal text-[#626262] dark:text-[#d5c5c5]">
+              {work.content}
+            </p>
+          </li>
+        )
+      })
+    }
+  </ol>
 </section>
 <style></style>
