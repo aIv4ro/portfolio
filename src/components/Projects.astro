@@ -1,6 +1,7 @@
 ---
 import { type ProjectI, Tecnology } from '../types/project'
 import Project from './Project.astro'
+import SectionTitle from './SectionTitle.astro'
 
 const projects: ProjectI[] = [
   {
@@ -52,7 +53,7 @@ const projects: ProjectI[] = [
 ---
 
 <section id="projects" class="flex flex-col gap-5 min-h-screen">
-  <h3 class="text-2xl mt-16">Proyectos</h3>
+  <SectionTitle>Proyectos</SectionTitle>
   <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     {
       projects.map((project) => (
@@ -66,10 +67,9 @@ const projects: ProjectI[] = [
     <a
       target="_blank"
       href="https://github.com/aIv4ro?tab=repositories"
-      class="p-3 bg-[var(--on-background-color)] rounded-md"
+      class="p-3 bg-[var(--on-background-color)] rounded-md font-semibold"
     >
       Ver más projectos
     </a>
   </div>
 </section>
-<style></style>
