@@ -1,15 +1,15 @@
 export const enum Tecnology {
-  Github = '/github.svg',
-  Angular = '/angular.svg',
-  HTML = '/html.svg',
-  Javascript = '/javascript.svg',
-  CSS = '/css.svg',
-  CSharp = '/csharp.svg',
-  Kotlin = '/kotlin.svg',
-  NodeJS = '/nodejs.svg',
-  MongoDB = '/mongodb.svg',
-  React = '/react.svg',
-  Flutter = '/flutter.svg'
+  Github = '/icons/github.svg',
+  Angular = '/icons/angular.svg',
+  HTML = '/icons/html.svg',
+  Javascript = '/icons/javascript.svg',
+  CSS = '/icons/css.svg',
+  CSharp = '/icons/csharp.svg',
+  Kotlin = '/icons/kotlin.svg',
+  NodeJS = '/icons/nodejs.svg',
+  MongoDB = '/icons/mongodb.svg',
+  React = '/icons/react.svg',
+  Flutter = '/icons/flutter.svg'
 }
 
 export interface ProjectI {
