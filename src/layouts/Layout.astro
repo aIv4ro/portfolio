@@ -88,10 +88,11 @@ const { title } = Astro.props
 </style>
 
 <script>
-  const themeClass = (() => {
+  const prefersDark = (() => {
     const theme = localStorage.getItem('theme')
-    if (theme == null || theme === 'dark') return 'dark'
-    return ''
+    return theme == null || theme === 'dark'
   })()
-  document.documentElement.classList.add(themeClass)
+  if (prefersDark) {
+    document.documentElement.classList.add('dark')
+  }
 </script>
