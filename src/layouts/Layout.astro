@@ -3,11 +3,17 @@ export interface Props {
   title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
+
+const themeClass = (() => {
+  const theme = Astro.cookies.get('theme')?.value
+  if (theme == null || theme === 'dark') return 'dark'
+  return ''
+})()
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es" class={themeClass}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

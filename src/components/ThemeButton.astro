@@ -13,6 +13,8 @@ import Theme from './icons/Theme.astro';
   const handleClick = (evt: any) => {
     evt.preventDefault();
     document.documentElement.classList.toggle("dark");
+    const isDark = document.documentElement.classList.contains("dark");
+    document.cookie = `theme=${isDark ? "dark" : "light"};path=/;max-age=31536000`;
   };
   button?.addEventListener("click", handleClick);
 </script>
