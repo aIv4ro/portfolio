@@ -4,16 +4,10 @@ export interface Props {
 }
 
 const { title } = Astro.props
-
-const themeClass = (() => {
-  const theme = Astro.cookies.get('theme')?.value
-  if (theme == null || theme === 'dark') return 'dark'
-  return ''
-})()
 ---
 
 <!doctype html>
-<html lang="es" class={themeClass}>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -92,3 +86,12 @@ const themeClass = (() => {
     color: var(--hover-text-color);
   }
 </style>
+
+<script>
+  const themeClass = (() => {
+    const theme = localStorage.getItem('theme')
+    if (theme == null || theme === 'dark') return 'dark'
+    return ''
+  })()
+  document.documentElement.classList.add(themeClass)
+</script>
