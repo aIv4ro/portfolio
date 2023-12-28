@@ -91,7 +91,8 @@ const { title } = Astro.props
 <script>
   const prefersDark = (() => {
     const theme = localStorage.getItem('theme')
-    return theme == null || theme === 'dark'
+    if (theme != null) return theme === 'dark'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
   })()
   if (prefersDark) {
     document.documentElement.classList.add('dark')
