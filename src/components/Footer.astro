@@ -2,22 +2,24 @@
 import Github from './icons/Github.astro'
 import LinkedIn from './icons/LinkedIn.astro'
 import MailButton from './MailButton.astro'
+import { useTranslation, type Locale } from '../i18n/i18n'
+
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 ---
 
 <footer
   class="flex flex-row justify-center items-center py-3 border-t-[1px] border-black mt-10"
 >
-  <a target="_blank" href="https://github.com/aIv4ro" aria-label="Ver Github">
+  <a target="_blank" href="https://github.com/aIv4ro" aria-label={t('aria.label.link.github')}>
     <Github width="27px" height="27px" />
   </a>
   <MailButton />
   <a
     target="_blank"
-    aria-label="Ver LinkedIn"
+    aria-label={t('aria.label.link.linkedin')}
     href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
   >
     <LinkedIn width="30px" height="30px" />
   </a>
 </footer>
-
-<style></style>

@@ -1,12 +1,16 @@
 ---
 import type { ProjectI } from '../types/project'
 import Github from './icons/Github.astro'
+import { useTranslation, type Locale } from '../i18n/i18n'
 
 export interface Props {
   project: ProjectI
 }
 
-const { project } = Astro.props;
+const { project } = Astro.props
+
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 ---
 
 <article class="group flex overflow-hidden h-72 relative shadow-lg rounded-sm">
@@ -40,7 +44,7 @@ const { project } = Astro.props;
       <a
         href={project.github}
         target="_blank"
-        aria-label="Ver proyecto en Github"
+        aria-label={t('aria.label.link.github.project')}
       >
         <Github width="40px" height="40px" />
       </a>

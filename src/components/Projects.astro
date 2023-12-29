@@ -2,38 +2,42 @@
 import { type ProjectI, Tecnology } from '../types/project'
 import Project from './Project.astro'
 import SectionTitle from './SectionTitle.astro'
+import { useTranslation, type Locale } from '../i18n/i18n'
+
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 
 const projects: ProjectI[] = [
   {
-    name: 'Chess',
+    name: t('projects.chess'),
     github: 'https://github.com/aIv4ro/chess',
     web: 'https://chessdev.vercel.app/',
     image: '/images/chess.webp',
     technologies: [Tecnology.React]
   },
   {
-    name: 'Conway\'s Game of life',
+    name: t('projects.cw.game'),
     github: 'https://github.com/aIv4ro/conways-game',
     web: 'https://alvaromg-cg.vercel.app/',
     image: '/images/cw-game.webp',
     technologies: [Tecnology.React]
   },
   {
-    name: 'Wallhaven',
+    name: t('projects.wallhaven'),
     github: 'https://github.com/aIv4ro/wallhaven',
     web: 'https://wallhavendev.vercel.app/',
     image: '/images/wallhaven.webp',
     technologies: [Tecnology.Angular]
   },
   {
-    name: 'Background remover',
+    name: t('projects.bg.remover'),
     github: 'https://github.com/aIv4ro/bg-remover',
     web: 'https://dev-bgremover.vercel.app/',
     image: '/images/bg-remover.webp',
     technologies: [Tecnology.React]
   },
   {
-    name: 'TPV',
+    name: t('projects.tpv'),
     github: 'https://github.com/ModuloInterLunar',
     image: '/images/tpv.webp',
     technologies: [
@@ -44,7 +48,7 @@ const projects: ProjectI[] = [
     ]
   },
   {
-    name: 'Gestión de instalaciones de pádel',
+    name: t('projects.padel'),
     github: 'https://github.com/Alvaro-Final-Proyect',
     image: '/images/paddle.webp',
     technologies: [Tecnology.MongoDB, Tecnology.NodeJS, Tecnology.Flutter]
@@ -53,7 +57,7 @@ const projects: ProjectI[] = [
 ---
 
 <section id="projects" class="flex flex-col gap-5 min-h-screen">
-  <SectionTitle>Proyectos</SectionTitle>
+  <SectionTitle>{t('projects.title')}</SectionTitle>
   <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     {
       projects.map((project) => (
@@ -69,7 +73,7 @@ const projects: ProjectI[] = [
       href="https://github.com/aIv4ro?tab=repositories"
       class="p-3 bg-[var(--on-background-color)] rounded-md font-semibold"
     >
-      Ver más projectos
+      {t('projects.see.more')}
     </a>
   </div>
 </section>

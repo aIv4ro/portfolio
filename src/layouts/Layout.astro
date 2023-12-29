@@ -1,24 +1,23 @@
 ---
-export interface Props {
-  title: string
-}
+import { useTranslation, type Locale } from '../i18n/i18n'
 
-const { title } = Astro.props
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Portfolio de Alvaro Martinez" />
+    <meta name="description" content={t('description')} />
     <meta
       name="google-site-verification"
       content="kJm0kBQ_514y1boWNCCIqNuiqJfkd9627lkMB8ijQvU"
     />
     <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{t('title')}</title>
   </head>
   <body class="relative max-w-[900px] m-auto">
     <slot />

@@ -1,6 +1,10 @@
 ---
 import Hamburguer from './icons/Hamburguer.astro'
-import ThemeButton from './ThemeButton.astro';
+import ThemeButton from './ThemeButton.astro'
+import { useTranslation, type Locale } from '../i18n/i18n'
+
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 ---
 
 <header
@@ -16,10 +20,18 @@ import ThemeButton from './ThemeButton.astro';
     <ul
       class="flex gap-3 items-center sm:justify-end justify-center max-sm:flex-col"
     >
-      <li><a href="#top" class="font-semibold">Inicio</a></li>
-      <li><a href="#projects" class="font-semibold">Proyectos</a></li>
-      <li><a href="#timeLine" class="font-semibold">Experiencia</a></li>
-      <li><a target="_blank" href="/documents/cv.pdf" class="font-semibold">CV</a></li>
+      <li>
+        <a href="#top" class="font-semibold">{t('nav.home')}</a>
+      </li>
+      <li>
+        <a href="#projects" class="font-semibold">{t('nav.projects')}</a>
+      </li>
+      <li>
+        <a href="#timeLine" class="font-semibold">{t('nav.experience')}</a>
+      </li>
+      <li>
+        <a target="_blank" href="/documents/cv.pdf" class="font-semibold">{t('nav.cv')}</a>
+      </li>
     </ul>
   </nav>
   <label

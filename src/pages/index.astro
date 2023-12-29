@@ -1,20 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import AppBar from '../components/AppBar.astro'
-import Home from '../components/Home.astro'
-import Projects from '../components/Projects.astro'
-import TimeLine from '../components/TimeLine.astro'
-import Footer from '../components/Footer.astro';
+import RootPage from '../components/RootPage.astro';
 ---
 
-<Layout title="Portfolio de Álvaro Martínez">
-  <AppBar />
-  <main class="p-3 mt-[var(--app-bar-height)] flex flex-col gap-10">
-    <Home />
-    <Projects />
-    <TimeLine />
-  </main>
-  <Footer />
-</Layout>
-
-<style></style>
+<RootPage />

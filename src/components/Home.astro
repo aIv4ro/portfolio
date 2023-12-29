@@ -3,6 +3,10 @@ import ArrowDown from './icons/ArrowDown.astro'
 import Github from './icons/Github.astro'
 import LinkedIn from './icons/LinkedIn.astro'
 import MailButton from './MailButton.astro'
+import { useTranslation, type Locale } from '../i18n/i18n'
+
+const currentLocale = Astro.currentLocale as Locale
+const t = useTranslation(currentLocale)
 ---
 
 <section class="flex flex-col h-[calc(100vh-var(--app-bar-height)-15px)]">
@@ -10,9 +14,9 @@ import MailButton from './MailButton.astro'
     class="flex gap-10 items-center justify-center h-full flex-col sm:flex-row"
   >
     <div class="max-w-[40ch]">
-      <p class="text-3xl">¡Hola!</p>
-      <p class="text-4xl font-bold">Soy Álvaro Martínez</p>
-      <p class="text-3xl font-semibold">Fullstack Developer</p>
+      <p class="text-3xl">{t('home.hi')}</p>
+      <p class="text-4xl font-bold">{t('home.im')}</p>
+      <p class="text-3xl font-semibold">{t('home.stack')}</p>
     </div>
     <picture class="flex flex-col gap-3">
       <img
@@ -26,14 +30,14 @@ import MailButton from './MailButton.astro'
         <a
           target="_blank"
           href="https://github.com/aIv4ro"
-          aria-label="Ver Github"
+          aria-label={t('aria.label.link.github')}
         >
           <Github width="27px" height="27px" />
         </a>
         <MailButton />
         <a
           target="_blank"
-          aria-label="Ver LinkedIn"
+          aria-label={t('aria.label.link.linkedin')}
           href="https://www.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-guti%C3%A9rrez-a5835b247/"
         >
           <LinkedIn width="30px" height="30px" />
@@ -44,7 +48,7 @@ import MailButton from './MailButton.astro'
   <a
     href="#projects"
     class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#c099fd]"
-    aria-label="Ver Proyectos"
+    aria-label={t('aria.label.link.projects')}
   >
     <ArrowDown />
   </a>
