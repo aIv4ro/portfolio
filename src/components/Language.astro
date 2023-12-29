@@ -1,0 +1,16 @@
+---
+import type { Locale } from '../i18n/i18n'
+import English from './icons/English.astro'
+import Spain from './icons/Spain.astro'
+
+const locale = Astro.currentLocale as Locale
+const link = locale === 'es' ? '/en' : '/'
+---
+
+<a href={link}>
+  {
+  locale === 'es'
+    ? <English />
+    : <Spain />
+  }
+</a>
