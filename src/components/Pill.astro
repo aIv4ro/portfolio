@@ -1,0 +1,18 @@
+---
+interface Props {
+  href: string
+  ariaLabel?: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
+}
+
+const { href, ariaLabel, target = '_blank' } = Astro.props
+---
+
+<a
+  href={href}
+  aria-label={ariaLabel}
+  target={target}
+  class="flex items-center font-semibold gap-1 px-5 py-2 rounded-3xl bg-[var(--on-background-color)]"
+>
+  <slot />
+</a>
