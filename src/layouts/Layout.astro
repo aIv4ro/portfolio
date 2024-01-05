@@ -3,6 +3,8 @@ import { useTranslation, type Locale } from '../i18n/i18n'
 
 const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
+
+console.log(Astro.url.origin)
 ---
 
 <!doctype html>
@@ -15,6 +17,7 @@ const t = useTranslation(currentLocale)
     <meta property="og:title" content={t('og.title')} />
     <meta property="og:description" content={t('og.description')} />
     <meta property="og:image" content={t('og.image')} />
+    <meta property="og:url" content={Astro.url.origin} />
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content={t('og.title')} />
     <meta name="twitter:description" content={t('og.description')} />
