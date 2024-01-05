@@ -1,6 +1,9 @@
 export const es = {
   title: 'Portfolio de Álvaro Martínez',
   description: 'Portfolio de Álvaro Martínez',
+  'og.title': 'Portfolio de Álvaro Martínez',
+  'og.description': 'Portfolio de Álvaro Martínez',
+  'og.image': '/images/og-es.webp',
   'nav.home': 'Inicio',
   'nav.projects': 'Proyectos',
   'nav.experience': 'Experiencia',

@@ -11,8 +11,12 @@ const t = useTranslation(currentLocale)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={t('description')} />
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={t('og.title')} />
+    <meta property="og:description" content={t('og.description')} />
+    <meta property="og:image" content={t('og.image')} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
     <title>{t('title')}</title>
   </head>
   <body

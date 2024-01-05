@@ -1,6 +1,9 @@
 export const en = {
   title: 'Álvaro Martínez\'s Portfolio',
   description: 'Álvaro Martínez\'s Portfolio',
+  'og.title': 'Álvaro Martínez\'s Portfolio',
+  'og.description': 'Álvaro Martínez\'s Portfolio',
+  'og.image': '/images/og-en.webp',
   'nav.home': 'Home',
   'nav.projects': 'Projects',
   'nav.experience': 'Experience',
