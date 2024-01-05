@@ -5,6 +5,7 @@ import LinkedIn from './icons/LinkedIn.astro'
 import { useTranslation, type Locale } from '../i18n/i18n'
 import Pill from './Pill.astro'
 import Mail from './icons/Mail.astro'
+import Link from './Link.astro'
 
 const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
@@ -54,12 +55,12 @@ const t = useTranslation(currentLocale)
       </Pill>
     </nav>
   </article>
-  <a
+  <Link
     href="#projects"
     class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-[#c099fd]"
     aria-label={t('aria.label.link.projects')}
   >
     <ArrowDown />
-  </a>
+  </Link>
 </section>
 <style></style>

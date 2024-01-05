@@ -3,6 +3,7 @@ import { type ProjectI, Tecnology } from '../types/project'
 import Project from './Project.astro'
 import SectionTitle from './SectionTitle.astro'
 import { useTranslation, type Locale } from '../i18n/i18n'
+import Link from './Link.astro'
 
 const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
@@ -68,12 +69,12 @@ const projects: ProjectI[] = [
     }
   </ul>
   <div class="flex justify-center">
-    <a
+    <Link
       target="_blank"
       href="https://github.com/aIv4ro?tab=repositories"
-      class="p-3 bg-[var(--on-background-color)] rounded-md font-semibold"
+      class="p-3 bg-onPrimary dark:bg-onPrimaryDark rounded-md font-semibold"
     >
       {t('projects.see.more')}
-    </a>
+    </Link>
   </div>
 </section>

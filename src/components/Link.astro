@@ -1,0 +1,24 @@
+---
+interface Props {
+  href: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
+  class?: string
+  'aria-label'?: string
+}
+
+const {
+  href,
+  target,
+  class: className = '',
+  'aria-label': ariaLabel = ''
+} = Astro.props
+---
+
+<a
+  href={href}
+  target={target}
+  class={`transition-[color] hover:text-linkHover dark:hover:text-linkHoverDark ${className}`}
+  aria-label={ariaLabel}
+>
+  <slot />
+</a>
