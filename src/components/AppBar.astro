@@ -7,6 +7,7 @@ import Link from './Link.astro'
 
 const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
+const cv = `/documents/cv-${currentLocale}.pdf`
 ---
 
 <header
@@ -32,7 +33,7 @@ const t = useTranslation(currentLocale)
         <Link href="#timeLine" class="font-semibold">{t('nav.experience')}</Link>
       </li>
       <li>
-        <Link target="_blank" href="/documents/cv.pdf" class="font-semibold">{t('nav.cv')}</Link>
+        <Link target="_blank" href={cv} class="font-semibold">{t('nav.cv')}</Link>
       </li>
     </ul>
   </nav>
