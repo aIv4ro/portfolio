@@ -3,7 +3,7 @@ export const en = {
   description: 'Álvaro Martínez\'s Portfolio',
   'og.title': 'Álvaro Martínez\'s Portfolio',
   'og.description': 'Álvaro Martínez\'s Portfolio',
-  'og.image': '/images/og-en.webp',
+  'og.image': 'https://alvaromg.vercel.app/images/og-en.webp',
   'nav.home': 'Home',
   'nav.projects': 'Projects',
   'nav.experience': 'Experience',
