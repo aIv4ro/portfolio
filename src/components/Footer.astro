@@ -10,14 +10,14 @@ const t = useTranslation(currentLocale)
 ---
 
 <footer
-  class="flex flex-row justify-center items-center py-3 border-t-[1px] border-black mt-10"
+  class="flex flex-row justify-center items-center py-3 border-t-[1px] border-primary mt-10"
 >
   <Link target="_blank" href="https://github.com/alvaromagu" aria-label={t('aria.label.link.github')}>
     <Github width="27px" height="27px" />
   </Link>
   <Link
     href="mailto:alvaromagu2002@gmail.com"
-    class="hover:text-[var(--hover-text-color)] mail-button"
+    class="hover:text-link-hover mail-button"
     aria-label={t('aria.label.button.contact')}
   >
     <Mail width={30} height={30} />

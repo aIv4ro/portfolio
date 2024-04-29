@@ -29,7 +29,7 @@ const t = useTranslation(currentLocale)
     <title>{t('title')}</title>
   </head>
   <body
-    class="relative max-w-[900px] m-auto text-primary dark:text-primaryDark bg-primary dark:bg-primaryDark"
+    class="relative max-w-[900px] m-auto text-primary bg-primary"
   >
     <slot />
   </body>
@@ -45,9 +45,30 @@ const t = useTranslation(currentLocale)
   }
 
   :root {
-    --app-bar-height: 60px;
     font-family: 'Nunito', sans-serif;
     scroll-behavior: smooth;
+    --app-bar-height: 60px;
+    --text-primary: black;
+    --text-secondary: #626262;
+    --text-link-hover: #0d5dc1;
+    --bg-primary: 246, 246, 246;
+    --bg-primary-blur: rgba(var(--bg-primary), 0.9);
+    --bg-on-primary: #e5e5e5;
+    --bg-code: #7c3aed25;
+    --border-primary: #e0e0e0;
+    --border-on-primary: #e0e0e0;
+    --border-code: #7c3aed;
+  }
+
+  .dark {
+    --text-primary: #e0dfdf;
+    --text-secondary: #d5c5c5;
+    --text-link-hover: #4497ff;
+    --bg-primary: 44, 51, 51;
+    --bg-primary-blur: #2c3333e0;
+    --bg-on-primary: #282828;
+    --border-primary: #e0e0e0;
+    --border-on-primary: #282828;
   }
 </style>
 

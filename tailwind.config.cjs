@@ -4,20 +4,20 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        primary: 'black',
-        primaryDark: '#e0dfdf',
-        linkHover: '#0d5dc1',
-        linkHoverDark: '#4497ff'
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        'link-hover': 'var(--text-link-hover)'
       },
       backgroundColor: {
-        primary: '#f6f6f6',
-        primaryDark: '#2c3333',
-        onPrimary: '#e5e5e5',
-        onPrimaryDark: '#282828'
+        primary: 'rgba(var(--bg-primary))',
+        'primary-blur': 'var(--bg-primary-blur)',
+        'on-primary': 'var(--bg-on-primary)',
+        code: 'var(--bg-code)'
       },
       borderColor: {
-        onPrimary: '#e5e5e5',
-        onPrimaryDark: '#282828'
+        primary: 'var(--border-primary)',
+        code: 'var(--border-code)',
+        'on-primary': 'var(--border-on-primary)'
       }
     }
   },
