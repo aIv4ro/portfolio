@@ -14,6 +14,10 @@ module.exports = {
         primaryDark: '#2c3333',
         onPrimary: '#e5e5e5',
         onPrimaryDark: '#282828'
+      },
+      borderColor: {
+        onPrimary: '#e5e5e5',
+        onPrimaryDark: '#282828'
       }
     }
   },

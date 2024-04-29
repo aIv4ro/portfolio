@@ -7,14 +7,14 @@ const t = useTranslation(currentLocale)
 
 const timeLine = [
   {
+    time: t('experience.i2e.time'),
+    title: t('experience.i2e.title'),
+    content: t('experience.i2e.description')
+  },
+  {
     time: t('experience.sime.time'),
     title: t('experience.sime.title'),
     content: t('experience.sime.description')
-  },
-  {
-    time: t('experience.fp.sime.time'),
-    title: t('experience.fp.sime.title'),
-    content: t('experience.fp.sime.description')
   },
   {
     time: t('experience.dam.time'),
@@ -26,12 +26,12 @@ const timeLine = [
 
 <section id="timeLine" class="min-h-screen">
   <SectionTitle>{t('experience.title')}</SectionTitle>
-  <ol class="relative border-l border-blue-800 ml-2 mt-3">
+  <ol class="relative border-l border-onPrimary dark:border-onPrimaryDark ml-2 mt-3">
     {
       timeLine.map((work) => {
         return (
           <li class="mb-7 ml-4">
-            <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-blue-400" />
+            <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-onPrimary dark:bg-onPrimaryDark" />
             <time class="mb-1 font-semibold leading-none text-[#626262] dark:text-[#d5c5c5]">
               {work.time}
             </time>
