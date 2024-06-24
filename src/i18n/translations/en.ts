@@ -23,7 +23,7 @@ export const en = {
   'projects.see.more': 'See more projects',
   'experience.title': 'Experience',
   'experience.i2e.title': 'Business Computer Engineering (I2E)',
-  'experience.i2e.description': 'Fullstack development (java + angular) of a project management software. Development of microservices and microfrontends for the migration of a monolithic system to a microservices and microfrontends architecture.',
+  'experience.i2e.description': 'Fullstack development (java + angular) of a banking software. Development of microservices and microfrontends for the migration of a monolithic system to a scalable and maintainable architecture.',
   'experience.i2e.time': 'April 2024 - Present',
   'experience.sime.title': 'Sime',
   'experience.sime.description': 'Fullstack development (java + angular) of a hotel and tourist apartments reservation software. Production deployment of the first versions of the system.',

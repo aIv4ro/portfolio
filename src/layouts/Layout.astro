@@ -73,10 +73,11 @@ const t = useTranslation(currentLocale)
 </style>
 
 <script>
+  const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)')
   const prefersDark = (() => {
     const theme = localStorage.getItem('theme')
     if (theme != null) return theme === 'dark'
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    return prefersDarkMedia.matches
   })()
   if (prefersDark) {
     document.documentElement.classList.add('dark')

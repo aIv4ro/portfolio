@@ -23,7 +23,7 @@ export const es = {
   'projects.see.more': 'Ver más projectos',
   'experience.title': 'Experiencia',
   'experience.i2e.title': 'Ingenieria Informática Empresarial (I2E)',
-  'experience.i2e.description': 'Desarrollo fullstack (java + angular) de un software de gestión de proyectos. Desarrollo de microservicios y microfrontends para la migración de un sistema monolítico a una arquitectura de microservicios y microfrontends.',
+  'experience.i2e.description': 'Desarrollo fullstack (java + angular) de un software bancario. Desarrollo de microservicios y microfrontends para la migración de un sistema monolítico a una arquitectura escalable y mantenible.',
   'experience.i2e.time': 'Abril 2024 - Actualidad',
   'experience.sime.title': 'Sime',
   'experience.sime.description': 'Desarrollo fullstack (java + angular) de un software de reservas para hoteles y apartamentos turísticos. Puesta en producción de las primeras versiones del sistema.',
