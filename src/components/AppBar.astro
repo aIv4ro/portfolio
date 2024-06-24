@@ -11,37 +11,37 @@ const cv = `/documents/cv-${currentLocale}.pdf`
 ---
 
 <header
-  class="p-3 h-[var(--app-bar-height)] flex items-center justify-between border-b-[1px] border-primary border-solid top-0 w-full max-w-[900px] m-auto fixed z-10 backdrop-blur-sm gap-3 bg-primary-blur"
+  class='p-3 h-[var(--app-bar-height)] flex items-center justify-between border-b-[1px] border-primary border-solid top-0 w-full max-w-[900px] m-auto fixed z-10 backdrop-blur-sm gap-3 bg-primary-blur'
 >
-  <code class="font-bold bg-code rounded py-1 px-2">
+  <code class='font-bold bg-code rounded py-1 px-2'>
     &#60;/alvaro&#62;
   </code>
-  <input class="hidden" type="checkbox" id="ham" name="ham" />
+  <input class='hidden' type='checkbox' id='ham' name='ham' />
   <nav
-    class="flex-1 max-sm:bg-primary max-sm:absolute max-sm:top-[var(--app-bar-height)] max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:h-[calc(100vh-var(--app-bar-height))] max-sm:pt-5 max-sm:opacity-95"
+    class='flex-1 max-sm:bg-primary max-sm:absolute max-sm:top-[var(--app-bar-height)] max-sm:bottom-0 max-sm:left-0 max-sm:right-0 max-sm:h-[calc(100vh-var(--app-bar-height))] max-sm:pt-5 max-sm:opacity-95'
   >
     <ul
-      class="flex gap-3 items-center sm:justify-end justify-center max-sm:flex-col"
+      class='flex gap-3 items-center sm:justify-end justify-center max-sm:flex-col'
     >
       <li>
-        <Link href="#top" class="font-semibold">{t('nav.home')}</Link>
+        <Link href='#top' class='font-semibold'>{t('nav.home')}</Link>
       </li>
       <li>
-        <Link href="#projects" class="font-semibold">{t('nav.projects')}</Link>
+        <Link href='#projects' class='font-semibold'>{t('nav.projects')}</Link>
       </li>
       <li>
-        <Link href="#timeLine" class="font-semibold">{t('nav.experience')}</Link>
+        <Link href='#timeLine' class='font-semibold'>{t('nav.experience')}</Link>
       </li>
       <li>
-        <Link target="_blank" href={cv} class="font-semibold">{t('nav.cv')}</Link>
+        <Link target='_blank' href={cv} class='font-semibold'>{t('nav.cv')}</Link>
       </li>
     </ul>
   </nav>
   <label
-    for="ham"
-    class="sm:hidden cursor-pointer flex-1 flex justify-end items-center"
+    for='ham'
+    class='sm:hidden cursor-pointer flex-1 flex justify-end items-center'
   >
-    <Hamburguer width="24px" height="24px" />
+    <Hamburguer width='24px' height='24px' />
   </label>
   <ThemeButton />
   <Language />

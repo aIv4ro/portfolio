@@ -11,53 +11,53 @@ const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
 ---
 
-<section class="flex flex-col h-[calc(100vh-var(--app-bar-height)-15px)]">
+<section class='flex flex-col h-[calc(100vh-var(--app-bar-height)-15px)]'>
   <article
-    class="flex flex-col items-center justify-center h-full gap-10"
+    class='flex flex-col items-center justify-center h-full gap-10'
   >
-    <div class="flex gap-10 items-center justify-center flex-col sm:flex-row">
-      <div class="max-w-[40ch]">
-        <p class="text-3xl">{t('home.hi')}</p>
-        <p class="text-4xl font-bold">{t('home.im')}</p>
-        <p class="text-3xl font-semibold">{t('home.stack')}</p>
+    <div class='flex gap-10 items-center justify-center flex-col sm:flex-row'>
+      <div class='max-w-[40ch]'>
+        <p class='text-3xl'>{t('home.hi')}</p>
+        <p class='text-4xl font-bold'>{t('home.im')}</p>
+        <p class='text-3xl font-semibold'>{t('home.stack')}</p>
       </div>
-      <picture class="flex flex-col gap-3">
+      <picture class='flex flex-col gap-3'>
         <img
-          src="/images/face.webp"
-          alt="alvaro martinez"
-          class="rounded-full object-cover"
-          width="200px"
-          height="200px"
+          src='/images/face.webp'
+          alt='alvaro martinez'
+          class='rounded-full object-cover'
+          width='200px'
+          height='200px'
         />
       </picture>
     </div>
-    <nav class="flex items-center gap-2 flex-wrap">
+    <nav class='flex items-center gap-2 flex-wrap'>
       <Pill
-        href="https://github.com/alvaromagu"
+        href='https://github.com/alvaromagu'
         aria-label={t('aria.label.link.github')}
       >
-        <Github width="27px" height="27px" />
+        <Github width='27px' height='27px' />
         Github
       </Pill>
       <Pill
-        href="mailto:alvaromagu2002@gmail.com"
+        href='mailto:alvaromagu2002@gmail.com'
         aria-label={t('aria.label.button.contact')}
       >
         <Mail width={27} height={27} />
         alvaromagu2002@gmail.com
       </Pill>
       <Pill
-        href="https://www.linkedin.com/in/alvaromagu/"
+        href='https://www.linkedin.com/in/alvaromagu/'
         aria-label={t('aria.label.link.linkedin')}
       >
-        <LinkedIn width="27px" height="27px" />
+        <LinkedIn width='27px' height='27px' />
         LinkedIn
       </Pill>
     </nav>
   </article>
   <Link
-    href="#projects"
-    class="w-10 p-1 m-auto animate-bounce rounded-full border-2 border-code"
+    href='#projects'
+    class='w-10 p-1 m-auto animate-bounce rounded-full border-2 border-code'
     aria-label={t('aria.label.link.projects')}
   >
     <ArrowDown />

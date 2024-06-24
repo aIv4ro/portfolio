@@ -14,28 +14,28 @@ const currentLocale = Astro.currentLocale as Locale
 const t = useTranslation(currentLocale)
 ---
 
-<article class="group flex overflow-hidden h-72 relative shadow-lg rounded-sm">
+<article class='group flex overflow-hidden h-72 relative shadow-lg rounded-sm'>
   <Link
-    target="_blank"
+    target='_blank'
     href={project.web ?? project.github}
-    class="hover:text-inherit w-full"
+    class='hover:text-inherit w-full'
   >
     <img
-      class="group-hover:scale-105 h-72 w-full object-cover transition-transform ease-in"
+      class='group-hover:scale-105 h-72 w-full object-cover transition-transform ease-in'
       src={project.image}
       alt={project.name}
     />
   </Link>
   <footer
-    class="absolute bottom-0 left-0 right-0 p-2 flex justify-between items-center bg-on-primary opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-primary"
+    class='absolute bottom-0 left-0 right-0 p-2 flex justify-between items-center bg-on-primary opacity-0 transition-all group-hover:opacity-100 border-t-2 border-t-primary'
   >
     <div>
-      <h4 class="font-semibold">{project.name}</h4>
-      <ul class="flex gap-1 list-none">
+      <h4 class='font-semibold'>{project.name}</h4>
+      <ul class='flex gap-1 list-none'>
         {
           project.technologies.map((technology) => (
             <li>
-              <img alt={technology} src={technology} width="20" height="20" />
+              <img alt={technology} src={technology} width='20' height='20' />
             </li>
           ))
         }
@@ -44,10 +44,10 @@ const t = useTranslation(currentLocale)
     <nav>
       <Link
         href={project.github}
-        target="_blank"
+        target='_blank'
         aria-label={t('aria.label.link.github.project')}
       >
-        <Github width="40px" height="40px" />
+        <Github width='40px' height='40px' />
       </Link>
     </nav>
   </footer>

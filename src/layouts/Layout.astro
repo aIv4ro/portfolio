@@ -8,28 +8,28 @@ const t = useTranslation(currentLocale)
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={t('description')} />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='description' content={t('description')} />
+    <meta name='generator' content={Astro.generator} />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={t('og.title')} />
-    <meta property="og:description" content={t('og.description')} />
-    <meta property="og:image" content={t('og.image')} />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content={t('og.title')} />
+    <meta property='og:description' content={t('og.description')} />
+    <meta property='og:image' content={t('og.image')} />
 
-    <meta property="twitter:domain" content="alvaromg.vercel.app">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@alvaromagu" />
-    <meta name="twitter:title" content={t('og.title')} />
-    <meta name="twitter:description" content={t('og.description')} />
-    <meta name="twitter:image" content={t('og.image')} />
+    <meta property='twitter:domain' content='alvaromg.vercel.app'>
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:creator' content='@alvaromagu' />
+    <meta name='twitter:title' content={t('og.title')} />
+    <meta name='twitter:description' content={t('og.description')} />
+    <meta name='twitter:image' content={t('og.image')} />
 
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel='icon' type='image/svg+xml' href='/icons/favicon.svg' />
     <title>{t('title')}</title>
   </head>
   <body
-    class="relative max-w-[900px] m-auto text-primary bg-primary"
+    class='relative max-w-[900px] m-auto text-primary bg-primary'
   >
     <slot />
   </body>

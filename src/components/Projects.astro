@@ -54,12 +54,12 @@ const projects: ProjectI[] = [
     image: '/images/paddle.webp',
     technologies: [Tecnology.MongoDB, Tecnology.NodeJS, Tecnology.Flutter]
   }
-];
+]
 ---
 
-<section id="projects" class="flex flex-col gap-5 min-h-screen">
+<section id='projects' class='flex flex-col gap-5 min-h-screen'>
   <SectionTitle>{t('projects.title')}</SectionTitle>
-  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  <ul class='grid grid-cols-1 gap-4 sm:grid-cols-2'>
     {
       projects.map((project) => (
         <li>
@@ -68,11 +68,11 @@ const projects: ProjectI[] = [
       ))
     }
   </ul>
-  <div class="flex justify-center">
+  <div class='flex justify-center'>
     <Link
-      target="_blank"
-      href="https://github.com/alvaromagu?tab=repositories"
-      class="p-3 bg-on-primary rounded-md font-semibold"
+      target='_blank'
+      href='https://github.com/alvaromagu?tab=repositories'
+      class='p-3 bg-on-primary rounded-md font-semibold'
     >
       {t('projects.see.more')}
     </Link>
