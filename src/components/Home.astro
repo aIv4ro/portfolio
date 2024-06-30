@@ -31,7 +31,7 @@ const t = useTranslation(currentLocale)
         />
       </picture>
     </div>
-    <nav class='flex items-center gap-2 flex-wrap'>
+    <nav class='flex justify-center items-center gap-2 flex-wrap'>
       <Pill
         href='https://github.com/alvaromagu'
         aria-label={t('aria.label.link.github')}
@@ -40,18 +40,18 @@ const t = useTranslation(currentLocale)
         Github
       </Pill>
       <Pill
-        href='mailto:alvaromagu2002@gmail.com'
-        aria-label={t('aria.label.button.contact')}
-      >
-        <Mail width={27} height={27} />
-        alvaromagu2002@gmail.com
-      </Pill>
-      <Pill
         href='https://www.linkedin.com/in/alvaromagu/'
         aria-label={t('aria.label.link.linkedin')}
       >
         <LinkedIn width='27px' height='27px' />
         LinkedIn
+      </Pill>
+      <Pill
+        href='mailto:alvaromagu2002@gmail.com'
+        aria-label={t('aria.label.button.contact')}
+      >
+        <Mail width={27} height={27} />
+        alvaromagu2002@gmail.com
       </Pill>
     </nav>
   </article>
