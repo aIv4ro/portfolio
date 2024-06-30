@@ -17,6 +17,9 @@ export interface ProjectI {
   description?: string
   github: string
   web?: string
-  image: string
+  image: {
+    dark: string
+    light: string
+  }
   technologies: Tecnology[]
 }

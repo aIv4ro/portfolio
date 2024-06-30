@@ -3,6 +3,7 @@ import type { ProjectI } from '../types/project'
 import Github from './icons/Github.astro'
 import { useTranslation, type Locale } from '../i18n/i18n'
 import Link from './Link.astro'
+import ThemedImage from './ThemedImage.astro'
 
 export interface Props {
   project: ProjectI
@@ -20,10 +21,11 @@ const t = useTranslation(currentLocale)
     href={project.web ?? project.github}
     class='hover:text-inherit w-full'
   >
-    <img
+    <ThemedImage
       class='group-hover:scale-105 h-72 w-full object-cover transition-transform ease-in'
-      src={project.image}
       alt={project.name}
+      dark={project.image.dark}
+      light={project.image.light}
     />
   </Link>
   <footer
