@@ -18,8 +18,8 @@ const t = useTranslation(currentLocale)
     <div class='flex gap-10 items-center justify-center flex-col sm:flex-row'>
       <div class='max-w-[40ch]'>
         <p class='text-3xl'>{t('home.hi')}</p>
-        <p class='text-4xl font-bold'>{t('home.im')}</p>
-        <p class='text-3xl font-semibold'>{t('home.stack')}</p>
+        <p class='text-4xl'>{t('home.im')} <span class='font-bold text-yellow-700 dark:text-yellow-500'>{t('home.name')}</span></p>
+        <p class='text-3xl font-semibold text-blue-700 dark:text-blue-500'>{t('home.stack')}</p>
       </div>
       <picture class='flex flex-col gap-3'>
         <img
