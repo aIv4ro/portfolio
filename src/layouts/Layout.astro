@@ -60,26 +60,16 @@ const t = useTranslation(currentLocale)
     --border-code: #7c3aed;
   }
 
-  .dark {
-    --text-primary: #e0dfdf;
-    --text-secondary: #d5c5c5;
-    --text-link-hover: #4497ff;
-    --bg-primary: 44, 51, 51;
-    --bg-primary-blur: #2c3333e0;
-    --bg-on-primary: #282828;
-    --border-primary: #e0e0e0;
-    --border-on-primary: #282828;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e0dfdf;
+      --text-secondary: #d5c5c5;
+      --text-link-hover: #4497ff;
+      --bg-primary: 44, 51, 51;
+      --bg-primary-blur: #2c3333e0;
+      --bg-on-primary: #282828;
+      --border-primary: #e0e0e0;
+      --border-on-primary: #282828;
+    }
   }
 </style>
-
-<script>
-  const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)')
-  const prefersDark = (() => {
-    const theme = localStorage.getItem('theme')
-    if (theme != null) return theme === 'dark'
-    return prefersDarkMedia.matches
-  })()
-  if (prefersDark) {
-    document.documentElement.classList.add('dark')
-  }
-</script>
