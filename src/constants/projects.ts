@@ -35,7 +35,7 @@ export const getProjects = (t: TFn): ProjectI[] => {
     },
     {
       name: t('projects.cw.game'),
-      github: 'https://github.com/alvaromagu/conways-game-dark',
+      github: 'https://github.com/alvaromagu/conways-game',
       web: 'https://alvaromg-cg.vercel.app/',
       image: {
         dark: '/images/cw-game-dark.webp',
