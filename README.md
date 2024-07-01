@@ -1,19 +1,12 @@
-# Portfolio personal
-## Tecnologías
-- [Astro](https://astro.build/)
-- [TailwindCSS](https://tailwindcss.com/)
-
+# Portfolio
 ## Setup
-Instalar dependencias
-```bash
-pnpm install
-```
-Iniciar servidor de desarrollo
-```bash
-pnpm run dev
-```
+1. Clone the repository
+`git clone git@github.com:alvaromagu/portfolio.git`
+2. Install dependencies
+`pnpm install`
+3. Run the development server
+`pnpm dev`
 
-## Preparar despliegue
-```bash
-pnpm run build
-```
+## Technologies
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
